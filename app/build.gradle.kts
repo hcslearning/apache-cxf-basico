@@ -22,7 +22,7 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
-    implementation(libs.guava)
+    implementation(libs.apache.cxf.core)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
