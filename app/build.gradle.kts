@@ -17,12 +17,18 @@ repositories {
 
 dependencies {
     // Use JUnit Jupiter for testing.
-    testImplementation(libs.junit.jupiter)
+    //testImplementation(libs.junit.jupiter)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
     implementation(libs.apache.cxf.core)
+    implementation(libs.apache.cxf.jaxws)
+    implementation(libs.apache.cxf.http)
+    implementation(libs.apache.cxf.jetty)
+    implementation(libs.apache.cxf.logging)
+    implementation(libs.logback.core)
+    implementation(libs.logback.classic)
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

@@ -4,7 +4,14 @@
 [versions]
 junit-jupiter = "5.11.3"
 cxf = "4.1.3"
+logback = "1.5.18"
 
 [libraries]
-junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-jupiter" }
-apache-cxf-core = { module = "org.apache.cxf:cxf-core", version.ref = "cxf" }
+junit-jupiter      = { module = "org.junit.jupiter:junit-jupiter",             version.ref = "junit-jupiter" }
+apache-cxf-core    = { module = "org.apache.cxf:cxf-core",                     version.ref = "cxf" }
+apache-cxf-jaxws   = { module = "org.apache.cxf:cxf-rt-frontend-jaxws",        version.ref = "cxf"}
+apache-cxf-http    = { module = "org.apache.cxf:cxf-rt-transports-http",       version.ref = "cxf"}
+apache-cxf-jetty   = { module = "org.apache.cxf:cxf-rt-transports-http-jetty", version.ref = "cxf"}
+apache-cxf-logging = { module = "org.apache.cxf:cxf-rt-features-logging",      version.ref = "cxf"}
+logback-core       = { module = "ch.qos.logback:logback-core",                 version.ref = "logback" }
+logback-classic    = { module = "ch.qos.logback:logback-classic",              version.ref = "logback" }
