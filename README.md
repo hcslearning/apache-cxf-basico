@@ -1,4 +1,4 @@
-# Apache CXF Básico (SOAP)
+# Apache CXF Básico con WS SOAP
 
 Echar a andar el proyecto con: 
 
