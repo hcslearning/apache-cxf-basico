@@ -1,14 +1,14 @@
-# Apache CXF Básico
+# Apache CXF Básico (SOAP)
 
 Echar a andar el proyecto con: 
 
-```
+```bash
 ./gradlew run
 ```
 
 Luego, se puede probar con Curl:
 
-```
+```bash
 curl -X POST \
      -H "Content-Type: text/xml; charset=utf-8" \
      -H "SOAPAction: \"\"" \
@@ -18,7 +18,7 @@ curl -X POST \
 
 Y la respuesta esperada debería ser algo así:
 
-```
+```xml
 <soap:Envelope
 	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
 	<soap:Body>
@@ -30,9 +30,26 @@ Y la respuesta esperada debería ser algo así:
 </soap:Envelope>
 ```
 
+## Dependencias
+
+```gradle
+// Requerido para SOAP WS
+implementation(libs.apache.cxf.core)
+implementation(libs.apache.cxf.jaxws)
+implementation(libs.apache.cxf.http)
+
+// Opcional, para ejecutar con Jetty incrustado
+implementation(libs.apache.cxf.jetty)
+
+// para logging usando SL4J y Logback
+implementation(libs.apache.cxf.logging)
+implementation(libs.logback.core)
+implementation(libs.logback.classic)
+```
+
 ## WSDL Generado por el código
 
-```
+```xml
 <?xml version='1.0' encoding='UTF-8'?>
 <wsdl:definitions
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
